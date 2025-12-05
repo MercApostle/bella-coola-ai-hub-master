@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bella Coola AI HUB – Business Audit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Minimal local styling – uses your black/gold theme base from styles.css */
+
+    body {
+      background: #000;
+      color: #f5f5f5;
+    }
+
+    .audit-container {
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      background: radial-gradient(
+          circle at top left,
+          rgba(212, 175, 55, 0.14),
+          transparent 60%
+        ),
+        #050505;
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+    }
+
+    .audit-title {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+      color: #d4af37;
+    }
+
+    .audit-subtitle {
+      margin: 0 0 1.25rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .audit-field {
+      margin-bottom: 1rem;
+    }
+
+    .audit-label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+      color: #d4af37;
+    }
+
+    .audit-input,
+    .audit-select,
+    .audit-textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      background: #050505;
+      color: #f5f5f5;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .audit-textarea {
+      border-radius: 12px;
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .audit-input::placeholder,
+    .audit-textarea::placeholder {
+      color: rgba(245, 245, 245, 0.55);
+    }
+
+    .audit-input:focus,
+    .audit-select:focus,
+    .audit-textarea:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+    }
+
+    .audit-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      border-radius: 999px;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: radial-gradient(
+          circle at top left,
+          rgba(255, 255, 255, 0.25),
+          transparent 55%
+        ),
+        #d4af37;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.6);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      box-shadow: 0 0 24px rgba(212, 175, 55, 0.85);
+    }
+
+    .audit-hint {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .audit-result {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      background: #050505;
+      font-size: 0.8rem;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+
+    @media (min-width: 768px) {
+      .audit-container {
+        margin: 3rem auto;
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="audit-container">
+    <h1 class="audit-title">Business Audit – Bella Coola AI HUB</h1>
+    <p class="audit-subtitle">
+      Answer a few focused questions so we can map where your time, money, and opportunities are leaking, and design a simple first system to fix it.
+    </p>
+
+    <form id="audit-form" name="business-audit" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="business-audit" />
+      <input type="hidden" name="bot-field" />
+      <!-- Fields will be injected here by audit.js -->
+      
+      <div class="audit-actions">
+        <button type="submit" id="audit-submit" class="btn-primary">
+          Submit Audit
+        </button>
+        <p class="audit-hint">
+          Your answers will be reviewed manually. We'll follow up with a recommended first system and next steps.
+        </p>
+      </div>
+    </form>
+
+    <div id="audit-result" class="audit-result" style="display:none;"></div>
+  </main>
+
+  <script type="module" src="audit.js"></script>
+</body>
+</html>
+

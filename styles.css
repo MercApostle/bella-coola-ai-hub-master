@@ -307,6 +307,7 @@ ul {
 }
 
 .gold-button,
+.btn-primary,
 .primary-btn {
     background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #b8860b 100%);
     padding: 14px 28px;
@@ -326,6 +327,7 @@ ul {
 }
 
 .gold-button:hover,
+.btn-primary:hover,
 .primary-btn:hover {
     filter: brightness(1.15);
     transform: translateY(-2px);
@@ -336,6 +338,7 @@ ul {
 }
 
 .gold-button:active,
+.btn-primary:active,
 .primary-btn:active {
     transform: translateY(1px);
     box-shadow:
@@ -1159,6 +1162,7 @@ ul {
     padding: 8px;
     border-top: 1px solid #222;
     background: #08080c;
+    margin: 0;
 }
 
 .chatbot-panel-input input {

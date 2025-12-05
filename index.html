@@ -174,7 +174,13 @@
                 <ul class="bullet-list" data-content-list="getStarted.auditIncludes"></ul>
                 
                 <div class="section-cta">
-                    <button class="btn primary-btn" data-content="getStarted.primaryCTA"></button>
+                    <a
+                      href="audit.html"
+                      class="btn-primary"
+                      id="start-business-audit-btn"
+                    >
+                      Start your business audit
+                    </a>
                     <button class="btn secondary-btn ai-assistant-btn" data-content="getStarted.secondaryCTA"></button>
                 </div>
             </div>
@@ -245,16 +251,14 @@
             <button class="chatbot-close" id="chatbotCloseBtn" aria-label="Close chat">&times;</button>
         </div>
 
-        <div class="chatbot-panel-body" id="chatbotMessages">
-            <div class="chatbot-message bot">
-                <strong>AI:</strong> Hi, I'm your AI assistant. How can I help today?
-            </div>
+        <div class="chatbot-panel-body" id="messages">
+            <!-- Initial greeting will be added by JavaScript -->
         </div>
 
-        <div class="chatbot-panel-input">
-            <input type="text" id="chatbotInput" placeholder="Type your message..." />
-            <button id="chatbotSendBtn">Send</button>
-        </div>
+        <form id="chatForm" class="chatbot-panel-input">
+            <input type="text" id="messageInput" placeholder="Type your message..." />
+            <button type="submit" id="chatbotSendBtn">Send</button>
+        </form>
     </div>
 
     <!-- Scripts -->
