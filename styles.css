@@ -299,26 +299,25 @@ ul {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
     text-align: center;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--font-base);
     white-space: nowrap;
-    min-width: 200px;
 }
 
+.gold-button,
 .primary-btn {
     background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #b8860b 100%);
-    color: #111;
+    padding: 14px 28px;
+    border-radius: 10px;
     border: 2px solid #b8860b;
+    color: #111;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
     box-shadow:
         inset 0 1px 2px rgba(255,255,255,0.5),
         inset 0 -2px 6px rgba(0,0,0,0.4),
@@ -326,6 +325,7 @@ ul {
     transition: all 0.15s ease-in-out;
 }
 
+.gold-button:hover,
 .primary-btn:hover {
     filter: brightness(1.15);
     transform: translateY(-2px);
@@ -335,6 +335,7 @@ ul {
         0 12px 20px rgba(0,0,0,0.45);
 }
 
+.gold-button:active,
 .primary-btn:active {
     transform: translateY(1px);
     box-shadow:
@@ -843,3 +844,52 @@ ul {
     }
 }
 
+
+.ai-assistant-btn {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 0; /* keep text for screen readers, hide visually */
+    background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #b8860b 100%);
+    border: 2px solid #b8860b;
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.5),
+        inset 0 -2px 6px rgba(0,0,0,0.4),
+        0 6px 12px rgba(0,0,0,0.35);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease-in-out;
+}
+
+.ai-assistant-btn::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: #111;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M11 2h2v2h-2V2Zm-5 6a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v7a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V8Zm2 0v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3Zm-4 3h2v2H4v-2Zm12 0h2v2h-2v-2Zm-9-3h2v2H7V8Zm6 0h2v2h-2V8Z'/%3E%3C/svg%3E");
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M11 2h2v2h-2V2Zm-5 6a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v7a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V8Zm2 0v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3Zm-4 3h2v2H4v-2Zm12 0h2v2h-2v-2Zm-9-3h2v2H7V8Zm6 0h2v2h-2V8Z'/%3E%3C/svg%3E");
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+
+.ai-assistant-btn:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.7),
+        inset 0 -2px 8px rgba(0,0,0,0.5),
+        0 12px 20px rgba(0,0,0,0.45);
+}
+
+.ai-assistant-btn:active {
+    transform: translateY(1px);
+    box-shadow:
+        inset 0 0 6px rgba(0,0,0,0.6),
+        0 3px 6px rgba(0,0,0,0.3);
+}
