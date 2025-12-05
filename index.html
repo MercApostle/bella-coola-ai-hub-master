@@ -254,9 +254,37 @@
         </div>
     </footer>
 
+    <!-- Chatbot Launcher -->
+    <div class="chatbot-wrapper">
+        <button class="talk-with-our-ai-assistant" id="chatbotBtn" aria-label="Talk with our AI assistant">
+            <span class="mouth"></span>
+        </button>
+        <p class="chatbot-label">Talk with our AI assistant</p>
+    </div>
+
+    <!-- Slide-up Chat Panel -->
+    <div class="chatbot-panel" id="chatbotPanel">
+        <div class="chatbot-panel-header">
+            <span>AI Assistant</span>
+            <button class="chatbot-close" id="chatbotCloseBtn" aria-label="Close chat">&times;</button>
+        </div>
+
+        <div class="chatbot-panel-body" id="chatbotMessages">
+            <div class="chatbot-message bot">
+                <strong>AI:</strong> Hi, I'm your AI assistant. How can I help today?
+            </div>
+        </div>
+
+        <div class="chatbot-panel-input">
+            <input type="text" id="chatbotInput" placeholder="Type your message..." />
+            <button id="chatbotSendBtn">Send</button>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="content.js"></script>
     <script src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
 
