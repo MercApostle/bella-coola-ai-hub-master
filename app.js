@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Open chatbot panel
     chatbotBtn.addEventListener('click', function() {
-        chatbotPanel.classList.add('active');
+        chatbotPanel.classList.add('open');
         chatbotInput.focus();
     });
 
     // Close chatbot panel
     chatbotCloseBtn.addEventListener('click', function() {
-        chatbotPanel.classList.remove('active');
+        chatbotPanel.classList.remove('open');
     });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && chatbotPanel.classList.contains('active')) {
-            chatbotPanel.classList.remove('active');
+        if (e.key === 'Escape' && chatbotPanel.classList.contains('open')) {
+            chatbotPanel.classList.remove('open');
         }
     });
 
