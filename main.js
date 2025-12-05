@@ -45,6 +45,19 @@ function initializeContent() {
     
     // Generate FAQ items
     generateFAQItems();
+    
+    // Ensure all AI assistant buttons have the correct class
+    ensureAIAssistantButtons();
+}
+
+// Ensure all buttons with "Talk with our AI assistant" text have the ai-assistant-btn class
+function ensureAIAssistantButtons() {
+    document.querySelectorAll('button').forEach(button => {
+        const text = button.textContent.trim().toLowerCase();
+        if (text.includes('talk with our ai assistant') || text.includes('talk with our ai')) {
+            button.classList.add('ai-assistant-btn');
+        }
+    });
 }
 
 // Helper function to get nested properties from object using dot notation
