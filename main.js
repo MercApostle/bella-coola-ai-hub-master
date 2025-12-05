@@ -146,7 +146,7 @@ function generateFAQItems() {
     const container = document.querySelector('.faq-list');
     if (!container || !PAGE_CONTENT.faq.items) return;
 
-    container.innerHTML = PAGE_CONTENT.faq.items.map(item => {
+    container.innerHTML = PAGE_CONTENT.faq.items.map((item, index) => {
         // Check if this is the guarantee question to add special styling
         const isGuaranteeQuestion = item.question.includes('something breaks');
         const answerHTML = isGuaranteeQuestion ? 
@@ -162,11 +162,60 @@ function generateFAQItems() {
 
         return `
             <div class="faq-item">
-                <div class="faq-question">${item.question}</div>
+                <button class="faq-question-btn" type="button" aria-expanded="false">
+                    <span class="faq-question-text">${item.question}</span>
+                    <span class="faq-toggle-icon">+</span>
+                </button>
                 ${answerHTML}
             </div>
         `;
     }).join('');
+    
+    // Add click handlers for FAQ accordion
+    initializeFAQAccordion();
+}
+
+// ====================================
+// FAQ ACCORDION
+// ====================================
+
+function initializeFAQAccordion() {
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    
+    faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const faqItem = this.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const icon = this.querySelector('.faq-toggle-icon');
+            
+            // Close all other FAQ items
+            faqButtons.forEach(otherButton => {
+                if (otherButton !== this) {
+                    const otherItem = otherButton.closest('.faq-item');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherButton.querySelector('.faq-toggle-icon');
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherItem.classList.remove('active');
+                    otherAnswer.style.maxHeight = null;
+                    otherIcon.textContent = '+';
+                }
+            });
+            
+            // Toggle current item
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                faqItem.classList.remove('active');
+                answer.style.maxHeight = null;
+                icon.textContent = '+';
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                faqItem.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.textContent = '−';
+            }
+        });
+    });
 }
 
 // ====================================
