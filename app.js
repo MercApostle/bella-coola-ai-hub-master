@@ -9,22 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatbotInput = document.getElementById('chatbotInput');
     const chatbotSendBtn = document.getElementById('chatbotSendBtn');
     const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotWrapper = document.querySelector('.chatbot-wrapper');
+
+    // Function to show/hide wrapper
+    function toggleWrapper(show) {
+        if (show) {
+            chatbotWrapper.style.display = 'flex';
+        } else {
+            chatbotWrapper.style.display = 'none';
+        }
+    }
 
     // Open chatbot panel
     chatbotBtn.addEventListener('click', function() {
         chatbotPanel.classList.add('open');
+        toggleWrapper(false); // Hide button and label
         chatbotInput.focus();
     });
 
     // Close chatbot panel
     chatbotCloseBtn.addEventListener('click', function() {
         chatbotPanel.classList.remove('open');
+        toggleWrapper(true); // Show button and label
     });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && chatbotPanel.classList.contains('open')) {
             chatbotPanel.classList.remove('open');
+            toggleWrapper(true); // Show button and label
         }
     });
 
