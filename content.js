@@ -12,7 +12,7 @@ const PAGE_CONTENT = {
         primaryCTA: "Business Audit",
         primaryMicrocopy: "Try my business audit — no obligations or sign-ups.",
         secondaryCTA: "View Examples",
-        supportLine: "Built to empower communities, tribes, and people.",
+        supportLine: "\"Built to empower communities, tribes, and people.\"",
         microLine: "Talk with our AI assistant"
     },
 
@@ -20,15 +20,7 @@ const PAGE_CONTENT = {
     whyThisMatters: {
         label: "Why This Matters",
         headline: "AI systems reduce mundane tasks and free you to focus on what matters",
-        intro: "Running a small business in a small town means wearing every hat — marketing, admin, customer service, operations. You're constantly pulled in a dozen directions, and the work that actually builds your business gets pushed aside. The right AI systems give you 3–4× ROI on your time investment and let you reclaim hours every week for family, strategy, or simply breathing.",
-        nowHeading: "What's happening now",
-        nowBullets: [
-            "You're manually responding to every inquiry, booking, or review",
-            "Customer data lives in your head or scattered across spreadsheets",
-            "You're missing leads because follow-up feels like another chore",
-            "Reporting and insights take hours you don't have",
-            "You can't scale because every new customer means more manual work"
-        ],
+        intro: "For a small-town business, AI systems aren't about competing — they're about freeing you from busywork so you can focus on what you love. By automating routine tasks like bookkeeping, scheduling, customer messaging, and marketing content, AI systems give you back time and mental space. They also simplify decisions — forecasting demand, managing cash flow, and tracking inventory — reducing stress and daily disruptions. The result is an ideal work-life rhythm: more energy for your craft, your customers, and the lifestyle you're building, with fewer distractions pulling you away from what truly matters, all while producing a 3–4× return on investment and meaningful savings of time, money, and mental energy.",
         changesHeading: "What changes with the right systems",
         changesBullets: [
             "Inquiries are captured, qualified, and followed up automatically",
@@ -183,7 +175,7 @@ const PAGE_CONTENT = {
         subline: "Practical, not hype.",
         bio: "I'm Jeremy Ashe, founder of Bella Coola AI HUB. I've spent years in construction, project management, marketing, and AI systems work. I moved to Bella Coola because I believe in small communities and the businesses that power them. I built this service because I saw too many small business owners drowning in admin work that could be automated — and because I wanted to offer something practical, not another AI sales pitch.",
         highlights: [
-            "10+ years in trades, construction, and project management",
+            "25+ years in trades, construction, and project management",
             "5+ years building AI systems and automations",
             "Based in Bella Coola, serving local and remote businesses",
             "Focused on practical ROI, not flashy tech",

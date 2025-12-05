@@ -407,13 +407,15 @@ ul {
 }
 
 .cta-microcopy {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
+    font-weight: 700;
     color: var(--color-gold-soft);
     margin-bottom: var(--spacing-sm);
 }
 
 .hero-support {
-    font-size: 1.125rem;
+    font-size: 3rem;
+    font-style: italic;
     color: var(--color-gold);
     margin-top: var(--spacing-md);
 }
@@ -463,9 +465,16 @@ ul {
     background: linear-gradient(135deg, var(--color-panel) 0%, rgba(20, 20, 20, 0.5) 100%);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
     transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: var(--spacing-md);
+        margin-bottom: 0;
+    }
 }
 
 .card:hover {
@@ -475,24 +484,38 @@ ul {
 }
 
 .card-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-soft) 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-sm);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .card h3 {
     margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .card h3 {
+        font-size: 1.25rem;
+    }
 }
 
 .card p {
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card p {
+        font-size: 0.9rem;
+    }
 }
 
 /* ====================================
@@ -501,13 +524,15 @@ ul {
 
 .service-tiers {
     display: grid;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     margin-top: var(--spacing-lg);
+    grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
     .service-tiers {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
     }
 }
 
