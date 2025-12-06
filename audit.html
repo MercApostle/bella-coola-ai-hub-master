@@ -145,16 +145,10 @@
     <form id="audit-form" name="business-audit" netlify netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="business-audit" />
       <input type="hidden" name="bot-field" />
+      <input type="hidden" name="subject" id="email-subject" value="" />
+      <textarea name="body" id="email-body" style="display: none;"></textarea>
       <!-- Fields will be injected here by audit.js -->
-      
-      <div class="audit-actions">
-        <button type="submit" id="audit-submit" class="btn-primary">
-          Submit Audit
-        </button>
-        <p class="audit-hint">
-          Your answers will be reviewed manually. We'll follow up with a recommended first system and next steps.
-        </p>
-      </div>
+      <!-- Submit button will be added at the bottom by audit.js -->
     </form>
 
     <div id="audit-result" class="audit-result" style="display:none;"></div>

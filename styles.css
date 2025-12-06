@@ -939,9 +939,9 @@ ul {
    ==================================== */
 
 .bridge-text {
+    color: var(--color-gold);
     font-size: 1.125rem;
     line-height: 1.8;
-    color: var(--color-text);
     padding: var(--spacing-md);
     background: rgba(212, 175, 55, 0.05);
     border-left: 3px solid var(--color-gold);
